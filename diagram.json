@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Smart Parking",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -130, "left": -230, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw2", "top": -70, "left": -230, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw3", "top": -10, "left": -230, "attrs": {} },
+    { "type": "wokwi-led", "id": "g1", "top": -200, "left": 260, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "g2", "top": -200, "left": 300, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "g3", "top": -200, "left": 340, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "r1", "top": -140, "left": 260, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "r2", "top": -140, "left": 300, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "r3", "top": -140, "left": 340, "attrs": { "color": "red" } },
+    { "type": "wokwi-hc-sr04", "id": "us", "top": -60, "left": 330, "attrs": { "distance": "200" } },
+    { "type": "wokwi-servo", "id": "servo", "top": 80, "left": 300, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": 150, "left": -250, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    ["esp:D13", "sw1:2", "green", []],
+    ["sw1:3", "esp:GND.1", "black", []],
+    ["esp:D14", "sw2:2", "green", []],
+    ["sw2:3", "esp:GND.1", "black", []],
+    ["esp:D27", "sw3:2", "green", []],
+    ["sw3:3", "esp:GND.1", "black", []],
+
+    ["esp:D25", "g1:A", "green", []],
+    ["esp:D26", "g2:A", "green", []],
+    ["esp:D32", "g3:A", "green", []],
+    ["g1:C", "esp:GND.1", "black", []],
+    ["g2:C", "esp:GND.1", "black", []],
+    ["g3:C", "esp:GND.1", "black", []],
+
+    ["esp:D33", "r1:A", "red", []],
+    ["esp:D18", "r2:A", "red", []],
+    ["esp:D19", "r3:A", "red", []],
+    ["r1:C", "esp:GND.1", "black", []],
+    ["r2:C", "esp:GND.1", "black", []],
+    ["r3:C", "esp:GND.1", "black", []],
+
+    ["us:VCC", "esp:VIN", "red", []],
+    ["us:GND", "esp:GND.1", "black", []],
+    ["us:TRIG", "esp:D4", "blue", []],
+    ["us:ECHO", "esp:D5", "purple", []],
+
+    ["servo:V+", "esp:VIN", "red", []],
+    ["servo:GND", "esp:GND.1", "black", []],
+    ["servo:PWM", "esp:D23", "orange", []],
+
+    ["lcd:VCC", "esp:VIN", "red", []],
+    ["lcd:GND", "esp:GND.1", "black", []],
+    ["lcd:SDA", "esp:D21", "blue", []],
+    ["lcd:SCL", "esp:D22", "yellow", []]
+  ],
+  "dependencies": {}
+}

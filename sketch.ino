@@ -1,6 +1,6 @@
 /*
   Smart Parking System (ESP32 + Wokwi)
-  Author: Manoj
+  Author: Manoj,Khadar basha
 
   Description:
     Tracks 3 parking slots, shows free spaces on a 16x2 I2C LCD,

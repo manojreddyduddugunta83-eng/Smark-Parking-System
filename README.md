@@ -57,4 +57,4 @@ A simulated smart parking system built on an ESP32. It tracks free parking slots
 - Buzzer alert when the lot is full
 
 ## Author
-Manoj
+Manoj, Khadar basha 

@@ -49,7 +49,7 @@ A simulated smart parking system built on an ESP32. It tracks free parking slots
 - ESP32Servo
 
 ## Wokwi Simulation
-[Open the simulation](https://wokwi.com/projects/YOUR_PROJECT_ID)
+[Open the simulation](https://wokwi.com/projects/477494671677372417)
 
 ## Future Improvements
 - Wi-Fi dashboard showing live slot availability
